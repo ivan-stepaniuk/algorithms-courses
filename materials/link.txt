@@ -1,0 +1,2 @@
+Latency Numbers Every Programmer Should Know - https://gist.github.com/jboner/2841832
+Memory (CS50)- http://cs50.wiki/Memory
