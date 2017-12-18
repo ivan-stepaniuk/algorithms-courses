@@ -1,8 +1,3 @@
-
-// var str = "2\n5\n1 4 3 2 5\n5\n3 4 5 6 7 8 9 10 11 12 13 14 1 2";
-// // console.log(str);
-// processData(str);
-
 function processData(input) {
 
     let t = Number.parseInt(input.split('\n')[0], 10);
@@ -10,7 +5,6 @@ function processData(input) {
 
     for(var i = 1; i <= t*2; i+=2)
     {
-
         let n =  Number.parseInt(input.split('\n')[i].split(' ')[0]);
 
         let a =  input.split('\n')[i+1].split(' ');
@@ -22,9 +16,8 @@ function processData(input) {
            aCounts[j] = 0;
            a[j] = Number.parseInt(a[j]);
         }
-        // console.log(a);
-      for (var q = n-1; q > 0; q--) {
         for (var j = n-1; j > 0; j--) {
+
           if( a[j] < a[j-1]){
             aCounts[j-1]++;
 
@@ -38,21 +31,16 @@ function processData(input) {
 
             k++;
             if (aCounts[j] > 2){ 
-              // console.log('Too chaotic')
-              exit = true;
               k = ('Too chaotic');
               break;
             }
-            if(exit) break;
+            if ((a[j] > a[j+1]) && a[j+1] != undefined) {
+              j+=2;
+            }
           }
-          // console.log(aCounts);
-          // console.log(a);
-          // console.log(k);
         }
-    }
     result.push(k);
   }
-    console.log(result.join('\n'));
     return (result.join(' '));
 }
 
