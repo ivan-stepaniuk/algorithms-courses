@@ -1,4 +1,4 @@
-## algorithms-courses ([algorithms-courses](https://prjctr.com.ua/algorithms-base.html))
+## [algorithms-courses](https://prjctr.com.ua/algorithms-base.html)
 
 ## Lecture notes
 
@@ -9,3 +9,7 @@
 
 ## Homeworks
 [Homework #1](https://www.hackerrank.com/projector-algo-base-5-hw-1)
+
+## Links
+[Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
+[Memory (CS50)](http://cs50.wiki/Memory)
