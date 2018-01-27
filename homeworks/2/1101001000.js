@@ -4,27 +4,36 @@ function processData(input) {
   let k = [];
   let maxK = 1;
   let positionsOnses = [1, 2, 4];
-
+  let result = [];
+``
 
 
   for (var i = 1; i < n; i++) {
-    let el = input.split('\n')[i];
+    let el = +input.split('\n')[i];
+    // console.log(el)
     k.push(el);
     if (el > maxK) maxK = el;
   }
+  
+    let j = 3;
+    while (positionsOnses[positionsOnses.length - 1] < maxK) {
+      positionsOnses[j] = positionsOnses[j - 1] * 2 - positionsOnses[j - 2] + 1;
+      j++;
+    }
+  
 
-  for (var i = 3; i < maxK; i++) {
-    positionsOnses[i] = positionsOnses[i - 1] * 2 - positionsOnses[i - 2] + 1;
-  }
-
-  console.log(positionsOnses.indexOf(6));
+  // console.log(positionsOnses.indexOf(6));
   for (var i = 0; i < n; i++) {
-    console.log(k[i])
-    // if (positionsOnses.indexOf(k[i]) == -1) 
-    // console.log(0);
-    // else
-    //   console.log(1);
+    // console.log(k[i])
+    if (positionsOnses.indexOf(k[i]) == -1)
+      result.push(0);
+    else
+      result.push(1);
   }
+  // console.log(positionsOnses);
+  console.log(result);
+  // console.log(j);
+  // console.log(maxK);
 }
 
-processData("4\n3\n14\n7\n6");
+processData("4\n3\n2e10\n7\n6");
